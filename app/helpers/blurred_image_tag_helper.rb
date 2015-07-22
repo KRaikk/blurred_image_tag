@@ -11,8 +11,8 @@ module BlurredImageTagHelper
 
     # Generate parent div with two images, one blurred and the original non-blurred one on top
     output = '<div class="' + parent_div_classes + '" style="width: ' + width + '; padding-top: ' + height + '">'
-    output += image_tag source, options.merge(class: blurred_img_classes).except(:width).except(:height)
-    output += image_tag source, options.merge(class: original_img_classes).except(:width).except(:height)
+    output += image_tag source, options.merge(class: blurred_img_classes).except(:width, :height)
+    output += image_tag source, options.merge(class: original_img_classes).except(:width, :height)
     output += '</div>'
     output.html_safe
   end

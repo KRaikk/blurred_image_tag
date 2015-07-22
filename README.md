@@ -1,8 +1,8 @@
 # blurred\_image\_tag
 
-Place an image into a fixed width/heigth box without being stretching in your Rails application, adjusting automatically no matter if it is landscape or portrait. Plus, add a blurred background of the same image to fill the box.
+Place an image into a fixed width/height box without being stretching in your Rails application, adjusting automatically no matter if it is landscape or portrait. Plus, add a blurred background of the same image to fill the box.
 
-Great for fixed width/heigth `<div>` that may contain different image sizes and aspect ratios.
+Great for fixed width/height `<div>` that may contain different image sizes and aspect ratios, like sliders.
 
 <img style="display: block; margin: 0 auto" src="http://alexeguia.net/wp-content/uploads/2015/07/blurred_logos.png" alt="Blurred logos example">
 
@@ -43,20 +43,20 @@ blurred_image_tag source, options = {}
 * The `source` parameter takes the image src (in your assets pipeline or wherever it is placed).
 * The `options` hash accepts the same HTML attributes as `image_tag`.
   * Passing a `width` attribute will set the box's width (in any CSS units). Defaults to 100%.
-  * Passing a `heigth` attribute will set the box'x heigth (in any CSS units). Defaults to 100%.
+  * Passing a `height` attribute will set the box's height (in any CSS units). Defaults to 100%.
   * Any other atributes used by gems like lazy_load will keep working.
 
 ### Examples
 
 ```ruby
 blurred_image_tag 'avatar.png'
-# => Creates a div with width: 100%, heigth: 100%
+# => Creates a div with width: 100%, height: 100%
 
 blurred_image_tag 'avatar.png', width: '200px'
-# => Creates a div with width: 200px, heigth: 100%
+# => Creates a div with width: 200px, height: 100%
 
-blurred_image_tag 'avatar.png', width: '480px', heigth: '360px'
-# => Creates a div with width: 480px, heigth: 360px
+blurred_image_tag 'avatar.png', width: '480px', height: '360px'
+# => Creates a div with width: 480px, height: 360px
 ```
 
 ### Output
